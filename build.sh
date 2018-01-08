@@ -3,9 +3,6 @@
 # Generate static files with buster
 buster generate --domain=http://127.0.0.1:2368
 
-# Generate rss feed
-mv static/rss/index.rss static/rss/index.html
-
 # Replace urls that were missed by buster
 find static/* -name robots.txt -type f -exec sed -i '' 's#http://localhost:2368#https://thecoffeecookbook.github.io#g' {} \;
 find static/* -name *.xsl -type f -exec sed -i '' 's#http://localhost:2368#https://thecoffeecookbook.github.io#g' {} \;

@@ -586,16 +586,14 @@ The first (most recent) post in the list is styled to be bigger than the others 
 }
 
 .post-full-image {
-    margin: 0 -10vw -165px;
     height: 800px;
     background: var(--lightgrey) center center;
     background-size: cover;
-    border-radius: 5px;
 }
 
 @media (max-width: 1170px) {
     .post-full-image {
-        margin: 0 -4vw -100px;
+        margin: 0 -4vw;
         height: 600px;
         border-radius: 0;
     }
@@ -610,51 +608,24 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .post-full-content {
     position: relative;
     margin: 0 auto;
-    padding: 70px 100px 0;
+    padding: 70px 0;
     min-height: 230px;
     font-family: Georgia, serif;
     font-size: 2.2rem;
     line-height: 1.6em;
     background: #fff;
+    max-width: 840px;
 }
 
 @media (max-width: 1170px) {
     .post-full-content {
-        padding: 5vw 7vw 0;
+        padding: 2vw 0;
     }
 }
 @media (max-width: 800px) {
     .post-full-content {
         font-size: 1.9rem;
     }
-}
-
-.post-full-content:before {
-    content: "";
-    position: absolute;
-    top: 15px;
-    left: -5px;
-    z-index: -1;
-    display: block;
-    width: 20px;
-    height: 200px;
-    background: rgba(39,44,49,0.15);
-    filter: blur(5px);
-    transform: rotate(-5deg);
-}
-
-.post-full-content:after {
-    content: "";
-    position: absolute;
-    top: 15px;
-    right: -5px;
-    z-index: -1;
-    display: block;
-    width: 20px;
-    height: 200px;
-    background: rgba(39,44,49,0.15);
-    filter: blur(5px);
-    transform: rotate(5deg);
 }
 
 .no-image .post-full-content {
